@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('hello') {
             steps {
-            sh '''
-                ls -la
+            bat '''
+                dir
                 node --version
                 npm --version
                 npm ci || cat /home/node/.npm/_logs/*-debug*.log
