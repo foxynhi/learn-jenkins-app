@@ -10,9 +10,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'npm -v'
-                sh 'npm ci'
-                sh 'npm run build'            
+                sh 'npm -v'       
             }
         }
     }
