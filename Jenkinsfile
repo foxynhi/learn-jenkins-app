@@ -7,7 +7,8 @@ pipeline {
             bat '''
                 call npm ci
                 call npm run build
-                dir dist
+                npm install -g serve
+                serve -s build
             '''
             }
         }
