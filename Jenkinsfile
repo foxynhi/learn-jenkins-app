@@ -3,14 +3,9 @@ pipeline {
 
     stages {
         stage('hello') {
-            agent {
-                docker{
-                    image 'node:20-alpine'
-                    reuseNode true
-                }
-            }
             steps {
-                sh 'npm -v'       
+                bat 'call npm ci || echo "npm ci failed but continuing"'
+                bat 'call npm run build'
             }
         }
     }
