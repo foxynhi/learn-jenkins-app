@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage('hello') {
             steps {
-            bat 'call npm ci || echo "npm ci failed but continuing"'
-            bat 'call npm run build'            
+                bat 'call npm -v'
+                bat 'call npm ci'
+                bat 'call npm run build'            
             }
         }
     }
