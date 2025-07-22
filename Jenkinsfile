@@ -18,6 +18,14 @@ pipeline {
                 npm run build
             '''
             }
+            post {
+                success {
+                    echo 'Build succeeded!'
+                }
+                failure {
+                    echo 'Build failed.'
+                }
+            }
         }
     }
 }
