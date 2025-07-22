@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('hello') {
             steps {
-                bat 'call npm -v'
-                bat 'call npm ci'
-                bat 'call npm run build'            
+                sh 'npm -v'
+                sh 'npm ci'
+                sh 'npm run build'            
             }
         }
     }
